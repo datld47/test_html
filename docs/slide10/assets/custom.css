@@ -1,56 +1,65 @@
-
-/* ===== FONT SCALE GIỐNG POWERPOINT ===== */
+/* ======= PHONG CÁCH CHUNG ======= */
 .reveal {
   font-family: "Segoe UI", "Arial", sans-serif;
-  font-size: 22px;              /* Base ≈ 22pt như body text PowerPoint */
-  line-height: 1.4;
-  background-color: white;  /* nền trắng */
-  color: black;             /* chữ đen */
+  font-size: 22px;               /* ≈ body text PowerPoint */
+  background-color: #fff;
+  color: #000;
+  line-height: 1.35;
+  letter-spacing: 0.1px;
 }
 
-/* --- Headings --- */
-/* --- Tiêu đề --- */
+/* ======= KÍCH THƯỚC VÀ CĂN LỀ GIỐNG POWERPOINT ======= */
+.reveal .slides > section {
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 60px 80px 40px 80px;  /* Lề trên/dưới/trái/phải chuẩn PPT */
+  text-align: left;
+}
+
+/* ======= TIÊU ĐỀ CHÍNH (H1) ======= */
 .reveal h1 {
-  font-size: 2.4em;  /* ≈ 50-55pt */
+  font-size: 2.5em;              /* ≈ 54pt */
   font-weight: 700;
-  text-align: center;   /* chỉ h1 căn giữa */
-  margin-top: 0;
-  margin-bottom: 0.6em;
+  text-align: center;            /* Căn giữa ngang */
+  width: 100%;
+  margin: 0;
+  margin-bottom: 40px;           /* cách phần nội dung bên dưới */
+  line-height: 1.1;
+  position: relative;
+  top: 0;                        /* luôn ở trên cùng */
 }
 
+/* ======= TIÊU ĐỀ PHỤ (H2, H3) ======= */
 .reveal h2 {
-  font-size: 1.8em;  /* ≈ 40pt */
+  font-size: 1.8em;              /* ≈ 40pt */
   font-weight: 700;
-  text-align: left;   /* tiêu đề phụ căn trái */
-  margin-top: 0.3em;
-  margin-bottom: 0.4em;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .reveal h3 {
-  font-size: 1.3em;  /* ≈ 28-30pt */
+  font-size: 1.3em;              /* ≈ 28pt */
   font-weight: 600;
   text-align: left;
-  margin-top: 0.3em;
-  margin-bottom: 0.4em;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
-.reveal h4 {
-  font-size: 1.1em;  /* ≈ 24-26pt */
-  font-weight: 600;
-  text-align: left;
-  margin-top: 0.3em;
-  margin-bottom: 0.4em;
-}
-
-/* --- Danh sách và đoạn văn --- */
+/* ======= NỘI DUNG CHÍNH ======= */
 .reveal p,
 .reveal ul,
 .reveal ol {
   font-size: 1em;
-  line-height: 1.4;
-  margin-top: 0.3em;
-  margin-bottom: 0.3em;
+  line-height: 1.45;
   text-align: left;
+  margin: 0.2em 0;
+  width: 100%;
 }
 
 .reveal ul ul,
@@ -59,40 +68,31 @@
 }
 
 .reveal li {
-  margin-bottom: 0.2em;
+  margin-bottom: 0.25em;
 }
 
-/* --- Chú thích, footer --- */
+/* ======= CODE BLOCK ======= */
+.reveal pre {
+  font-family: Consolas, "Courier New", monospace;
+  background-color: #f5f5f5;
+  color: #222;
+  padding: 8px 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.95em;
+  line-height: 1.3;
+  max-height: 65vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ======= CHÚ THÍCH / FOOTER ======= */
 .reveal small {
   font-size: 0.75em;
   opacity: 0.8;
 }
 
-/*Thẻ a*/
-.reveal a {
-  color: #0078d7;
-  text-decoration: none;
-}
-.reveal a:hover {
-  text-decoration: underline;
-}
-
-/*the pre*/
-
-.reveal pre {
-  font-family: Consolas, "Courier New", monospace;
-  background-color: #f7f7f7;
-  color: #222;
-  padding: 6px 10px;
-  border-radius: 6px;
-  overflow-x: auto;
-  font-size: 0.95em;
-  line-height: 1.3;
-  max-height: 70vh;
-}
-
-
-/* Các quy tắc cũ của bạn */
+/* ======= MÀU CODE KIỂU VS CODE ======= */
 .hljs-comment { color: #6a9955; font-style: italic; }
 .hljs-keyword { color: #0000ff; font-weight: bold; }
 .hljs-string  { color: #a31515; }
@@ -102,125 +102,48 @@
 .hljs-params { color: #001080; }
 .hljs-built_in { color: #0000ff; }
 
-
-.reveal .slides > section {
-  display: flex !important;
-  flex-direction: column;
-  justify-content: flex-start !important; /* nội dung từ trên xuống */
-  align-items: stretch !important;
-  text-align: left;
-  padding: 40px; /* lề trong slide */
-  box-sizing: border-box;
-}
-
-
-/* --- Nội dung luôn canh trái --- */
-.reveal p,
-.reveal ul,
-.reveal ol,
-.reveal pre,
-.reveal div {
-  text-align: left;
-  margin-left: 0;
-}
-
-.reveal .slides section div {
-  max-height: 88vh;
-  overflow-y: auto;
-}
-
-
-.reveal .s1 { font-size: 1rem; }
-.reveal .s2 { font-size: 2rem; }
-.reveal .s3 { font-size: 3rem; }
-
-/* .reveal .slides div {
-  max-height: 90vh;
-  overflow-y: auto;
-  padding: 10px;
-  box-sizing: border-box;
-} */
-
-/*lay out cột*/
-.split-2, .split-3, .split-4 {
+/* ======= LAYOUT CHIA CỘT ======= */
+.split-2, .split-3 {
   display: flex;
   flex-direction: row;
-  height: 100%;
-  gap: 20px;
+  gap: 30px;
+  width: 100%;
+  height: auto;
+}
+.split-2 .column,
+.split-3 .column {
+  flex: 1;
+  overflow-y: auto;
 }
 
-.split-2 .column { flex: 1; }
-.split-3 .column { flex: 1; }
-.split-4 .column { flex: 1; }
-
-
-/*layout image text*/
+/* ======= LAYOUT HÌNH + NỘI DUNG ======= */
 .image-text {
   display: flex;
-  flex-direction: row;
-  height: 100%;
-  gap: 20px;
+  gap: 30px;
+  align-items: center;
 }
 .image-text .image { flex: 1; }
-.image-text .text { flex: 1; overflow-y: auto; }
+.image-text .text { flex: 1; }
 
-
-/*layout code-demo*/
-.code-demo {
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-  gap: 20px;
-}
-.code-demo .code { flex: 1; overflow-y: auto; font-family: monospace; }
-.code-demo .demo { flex: 1; overflow-y: auto; }
-
-/*Layout timeline step: kết hợp fragment*/
-.timeline {
-  display: block;
-  padding: 20px;
-}
-.timeline .step {
-  margin-bottom: 10px;
-}
-
-/*Layout full slide*/
-.full-slide {
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-/*Layout */
+/* ======= SLIDE NỔI BẬT ======= */
 .highlight-slide {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #000;
+  color: #fff;
   height: 100%;
-  background-color: #000; /* nền đen */
-  color: #fff;            /* chữ trắng */
-  padding: 20px;
-  box-sizing: border-box;
+  padding: 40px;
+  text-align: center;
 }
 .highlight-slide h1 {
   font-size: 3em;
+  margin: 0;
 }
 
-.grid-slide {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cột đều nhau */
-  gap: 10px;
-  height: 100%;
-  padding: 20px;
-  background-color: #000; /* nền đen */
-  box-sizing: border-box;
-}
-
-.grid-slide img {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
+/* ======= SCROLL-BOX ======= */
+.scroll-box {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding-right: 10px;
 }
