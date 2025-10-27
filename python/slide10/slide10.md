@@ -1,9 +1,3 @@
----
-reveal:
-  css: ../custom.css
-  static_dir: images
----
-
 # Lập trình hướng đối tượng OOP
 
 ---
@@ -185,6 +179,9 @@ Nhiệm vụ : **Tạo một Class tên là Sensor để mô tả một cảm bi
 ---
 
 ## TIết 2: OPP - Tính kế thừa
+
+<div>
+
 ### Mục tiêu
 - Kiến thức: 
   - Hiểu Kế thừa, Lớp Cha, Lớp Con. 
@@ -193,6 +190,8 @@ Nhiệm vụ : **Tạo một Class tên là Sensor để mô tả một cảm bi
   - Đọc hiểu và phân tích được cấu trúc kế thừa trong code dự án. 
 - Tư duy: 
   - Hình thành tư duy tái sử dụng, tránh lặp lại code 
+
+</div>
 
 ---
 
@@ -224,6 +223,9 @@ Nhiệm vụ : **Tạo một Class tên là Sensor để mô tả một cảm bi
 
 ---
 ## Tình huống 2:
+
+<div>
+
 - Giả sử chúng ta viết đơn lẻ như sau
 ```python
 class FanData:
@@ -240,6 +242,8 @@ class PumpData:
         self.timestamp = timestamp
 ```
 <mark>Làm sao ta có thể tránh lặp điểm chung?</mark>
+
+</div>
 
 ---
 
@@ -265,9 +269,12 @@ class PumpData:
 ---
 
 ### Minh họa về kế thừa
+
+<div>
+
 - Khai báo lớp cha
 
-```python
+```python s1
 class RelayData:
     def __init__(self, id, value,timestamp):
         self.id = id
@@ -280,7 +287,7 @@ class RelayData:
 
 - Khai báo lớp con
 
-```python
+```python s1
 class FanData(RelayData):
     def __init__(self, id, value,timestamp):
         super().__init__(id,value,timestamp)
@@ -288,6 +295,8 @@ class FanData(RelayData):
         return f"FanData id={self.id}, value={self.value},timestamp={self.timestamp}"
 ```
 <!-- .element: class="fragment" -->
+
+</div>
 
 ---
 

@@ -1,3 +1,81 @@
+
+/* ===== FONT SCALE GIỐNG POWERPOINT ===== */
+.reveal {
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 22px;              /* Base ≈ 22pt như body text PowerPoint */
+  line-height: 1.4;
+  background-color: white;  /* nền trắng */
+  color: black;             /* chữ đen */
+}
+
+/* --- Headings --- */
+.reveal h1 { font-size: 2.5em; font-weight: bold; }   /* ≈ 55pt */
+.reveal h2 { font-size: 1.8em; font-weight: bold; }   /* ≈ 40pt */
+.reveal h3 { font-size: 1.4em; font-weight: 600; }    /* ≈ 30pt */
+.reveal h4 { font-size: 1.2em; font-weight: 600; }    /* ≈ 26pt */
+
+/* --- Danh sách và đoạn văn --- */
+.reveal p,
+.reveal ul,
+.reveal ol {
+  font-size: 1em;               /* ≈ 22pt (chuẩn body text PPT) */
+  line-height: 1.5;
+}
+
+.reveal ul ul,
+.reveal ol ol {
+  font-size: 0.9em;             /* ≈ 20pt cho bullet phụ */
+}
+
+.reveal li {
+  margin-bottom: 0.3em;
+}
+
+/* --- Footer, slide number, chú thích --- */
+.reveal small {
+  font-size: 0.7em;             /* ≈ 16pt */
+  opacity: 0.8;
+}
+
+/*Thẻ a*/
+
+.reveal a {
+  color: #66b3ff;
+}
+
+/*the pre*/
+
+.reveal pre  {
+    font-family: Consolas, "Courier New", monospace; /* font monospace hệ thống */
+    background-color: #f0f0f0; /* nền code sáng nhưng nổi bật */
+    color: #333333;             /* chữ code đậm */
+    padding: 4px 6px;
+    border-radius: 5px;
+    display: block;
+    overflow-x: auto;
+    font-size: 1.1em;
+}
+
+
+/* Các quy tắc cũ của bạn */
+.hljs-comment { color: #6a9955; font-style: italic; }
+.hljs-keyword { color: #0000ff; font-weight: bold; }
+.hljs-string  { color: #a31515; }
+.hljs-number  { color: #098658; }
+.hljs-function { color: #795e26; } /* Thường là tên hàm KHI GỌI */
+.hljs-title { color: #267f99; }    /* Thường là tên KHI ĐỊNH NGHĨA hàm/lớp */
+
+/* QUY TẮC MỚI ĐỂ GIỐNG VS CODE */
+.hljs-params {
+  color: #001080; /* Màu cho tham số (parameter) */
+}
+.hljs-built_in {
+  color: #0000ff; /* Màu cho hàm/lớp có sẵn (print, len) */
+}
+
+
+
+
 .reveal .s1 { font-size: 1rem; }
 .reveal .s2 { font-size: 2rem; }
 .reveal .s3 { font-size: 3rem; }
