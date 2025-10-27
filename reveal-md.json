@@ -1,5 +1,8 @@
 {
   "theme": "white",
   "highlightTheme": "github",
-  "css": "custom.css"
+  "assetsDir": "assets",
+  "css": [
+    "custom.css"
+  ]
 }
