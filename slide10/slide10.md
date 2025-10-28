@@ -41,6 +41,8 @@
 
 ---
 
+<div>
+
 ## Khái niệm lập trình OPP
 ### Class , Object
 
@@ -58,6 +60,8 @@
 !['car1.png'](images/car1.png)
 
 </div>
+</div>
+
 </div>
 
 ---
@@ -88,6 +92,8 @@ Phương thức tác động lên chiếc xe
 
 ---
 
+<div>
+
 ## Tính đóng gói
 Gom tất cả những thứ liên quan (thuộc tính và phương thức) vào chung một "cái hộp" là Class
 <div class="split-2">
@@ -107,6 +113,7 @@ Gom tất cả những thứ liên quan (thuộc tính và phương thức) vào
   - Nhấn chuột trái <!-- .element: class="fragment" -->
   - Di chuyển chuột <!-- .element: class="fragment" -->
 
+</div>
 </div>
 </div>
 
@@ -180,8 +187,6 @@ Nhiệm vụ : **Tạo một Class tên là Sensor để mô tả một cảm bi
 
 ## TIết 2: OPP - Tính kế thừa
 
-<div>
-
 ### Mục tiêu
 - Kiến thức: 
   - Hiểu Kế thừa, Lớp Cha, Lớp Con. 
@@ -191,11 +196,11 @@ Nhiệm vụ : **Tạo một Class tên là Sensor để mô tả một cảm bi
 - Tư duy: 
   - Hình thành tư duy tái sử dụng, tránh lặp lại code 
 
-</div>
-
 ---
+<div>
 
 ## Tình huống 1
+
 <div class="split-3">
 
 <div class="column">
@@ -221,12 +226,12 @@ Nhiệm vụ : **Tạo một Class tên là Sensor để mô tả một cảm bi
 </div>
 <mark>Làm sao ta có thể tái sử dụng module dựng sẵn?</mark>
 
+</div>
+
 ---
 ## Tình huống 2:
+Giả sử chúng ta viết đơn lẻ như sau
 
-<div>
-
-- Giả sử chúng ta viết đơn lẻ như sau
 ```python
 class FanData:
     def __init__(self, id, value, timestamp):
@@ -234,6 +239,7 @@ class FanData:
         self.value = value
         self.timestamp = timestamp
 ```
+
 ```python
 class PumpData:
     def __init__(self, id, value, timestamp):
@@ -242,8 +248,6 @@ class PumpData:
         self.timestamp = timestamp
 ```
 <mark>Làm sao ta có thể tránh lặp điểm chung?</mark>
-
-</div>
 
 ---
 
@@ -269,10 +273,7 @@ class PumpData:
 ---
 
 ### Minh họa về kế thừa
-
-<div>
-
-- Khai báo lớp cha
+Khai báo lớp cha
 
 ```python s1
 class RelayData:
@@ -285,7 +286,7 @@ class RelayData:
 ```
 <!-- .element: class="fragment" -->
 
-- Khai báo lớp con
+Khai báo lớp con
 
 ```python s1
 class FanData(RelayData):
@@ -295,8 +296,6 @@ class FanData(RelayData):
         return f"FanData id={self.id}, value={self.value},timestamp={self.timestamp}"
 ```
 <!-- .element: class="fragment" -->
-
-</div>
 
 ---
 
