@@ -47,15 +47,48 @@
 
 .reveal li { margin-bottom: 0.3em; }
 
-/* ====== 2 CỘT & 3 CỘT ====== */
-.split-2, .split-3 {
-  display: flex;
-  gap: 30px;
-  width: 100%;
-  height: auto;
+
+
+/* ====== NỘI DUNG CHÍNH (CONTENT) ====== */
+.reveal .content {
+  display: block;
+  font-size: 1em;          /* ~22pt như PPT */
+  line-height: 1.4;
+  color: black;
+  text-align: left;
+  margin: 0;               /* không thêm khoảng cách ngoài */
+  padding: 0;              /* dùng padding của section */
 }
 
-.columns > div { flex: 1; }
+/* ====== HỖ TRỢ 2 CỘT / 3 CỘT TRONG CONTENT ====== */
+.reveal .content.split-2, 
+.reveal .content.split-3 {
+  display: flex;
+  gap: 30px;              /* khoảng cách giữa cột */
+}
+
+.reveal .content.split-2 > div,
+.reveal .content.split-3 > div {
+  flex: 1;                /* chia đều cột */
+}
+
+/* Ví dụ thêm scroll-box nếu muốn nhưng không ảnh hưởng PDF */
+.reveal .content.scroll-box {
+  max-height: 100%;
+  overflow: auto;
+}
+
+/* Thụt vào các danh sách con */
+.reveal .content ul,
+.reveal .content ol {
+  margin: 0 0 0.6em 1.2em; /* margin-bottom 0.6em, thụt 1.2em */
+}
+
+.reveal .content ul ul,
+.reveal .content ol ol {
+  margin-left: 1em;
+  font-size: 0.9em;
+}
 
 
 /* ====== CODE BLOCK ====== */
@@ -101,6 +134,50 @@
   text-align: center;
 }
 
+
+/* ====== SLIDE BÌA ====== */
+.reveal section:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* header – center – footer */
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 60px 80px;
+  box-sizing: border-box;
+  background-color: white;
+  color: black;
+}
+
+/* HEADER */
+.reveal .title-header img {
+  max-height: 100px;
+  margin-bottom: 20px;
+}
+
+/* CENTER */
+.reveal .title-center h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.reveal .title-center h3 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+.reveal .title-center p {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+/* FOOTER */
+.reveal .title-footer p {
+  font-size: 1em;
+  opacity: 0.7;
+  margin: 2px 0;
+}
+
+
 /* ====== PDF CHẾ ĐỘ ====== */
 @media print {
   .reveal {
@@ -110,3 +187,5 @@
     padding: 30px 50px;
   }
 }
+
+
